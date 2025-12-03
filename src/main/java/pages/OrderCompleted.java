@@ -9,14 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class OrderComleted {
+public class OrderCompleted {
 
     WebDriver driver;
     public WebDriverWait wait;
 
     By successMessage = By.className("Order_ModalHeader__3FDaJ");
 
-    public OrderComleted(WebDriver driver) {
+    public OrderCompleted(WebDriver driver) {
 
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));

@@ -51,9 +51,6 @@ build/
 ### VS Code ###
 .vscode/
 .vscode/# Maven output
-target/
-# Logs
-*.log
 
 ### Mac OS ###
 .DS_Store

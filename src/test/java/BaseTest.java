@@ -16,7 +16,7 @@ public class BaseTest {
     MainPage mainPage;
     OrderFormFirst orderFormFirst;
     OrderFormSecond orderFormSecond;
-    OrderComleted orderCompleted;
+    OrderCompleted orderCompleted;
     OrderFormFinish orderFormFinish;
 
     WebDriver driver;
@@ -52,7 +52,7 @@ public class BaseTest {
         mainPage = new MainPage(driver);
         orderFormFirst = new OrderFormFirst(driver);
         orderFormSecond = new OrderFormSecond(driver);
-        orderCompleted = new OrderComleted(driver);
+        orderCompleted = new OrderCompleted(driver);
         orderFormFinish = new OrderFormFinish(driver);
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
