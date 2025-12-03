@@ -15,11 +15,14 @@ public class OrderFormFinish {
 
     By confirmButton = By.xpath(".//button[text()='Да']");
 
+
+
     public OrderFormFinish(WebDriver driver) {
 
          this.driver = driver;
          this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+
 
      public void ClickYesOnFinishForm () {
           WebElement confirmBtn = wait.until(ExpectedConditions.elementToBeClickable(confirmButton));

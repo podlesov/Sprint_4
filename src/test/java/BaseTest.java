@@ -3,6 +3,8 @@ import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.*;
@@ -16,7 +18,7 @@ public class BaseTest {
     MainPage mainPage;
     OrderFormFirst orderFormFirst;
     OrderFormSecond orderFormSecond;
-    OrderCompleted orderCompleted;
+    OrderComleted orderCompleted;
     OrderFormFinish orderFormFinish;
 
     WebDriver driver;
@@ -26,7 +28,7 @@ public class BaseTest {
 
     @Before
     public void setUp() {
-     // /*     Устанавливанм драйвер для Chrome
+      // /*     Устанавливанм драйвер для Chrome
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
@@ -52,7 +54,7 @@ public class BaseTest {
         mainPage = new MainPage(driver);
         orderFormFirst = new OrderFormFirst(driver);
         orderFormSecond = new OrderFormSecond(driver);
-        orderCompleted = new OrderCompleted(driver);
+        orderCompleted = new OrderComleted(driver);
         orderFormFinish = new OrderFormFinish(driver);
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -61,9 +63,10 @@ public class BaseTest {
                 ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
         WebElement cookieButton = wait.until(ExpectedConditions.elementToBeClickable(cookieButtonLocator));
         cookieButton.click();
+
     }
 
-    // /*
+  // /*
     @After
     public void tearDown() {
         if (driver != null) {

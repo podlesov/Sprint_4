@@ -13,6 +13,8 @@ public class MainPage {
     WebDriver driver;
     public WebDriverWait wait;
 
+
+
     // Локаторы кнопок "заказать" для OrderScooterTest
 
     By startOrderButtonTop = By.className("Button_Button__ra12g");
@@ -30,7 +32,7 @@ public class MainPage {
 
         WebElement questionByIndex = wait.until(ExpectedConditions.elementToBeClickable(questionLocator));
 
-        // Прокручиваем страницу так, чтобы элемент оказался в видимой области
+      // Прокручиваем страницу так, чтобы элемент оказался в видимой области
 
         // Прокручиваем к элементу
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", questionByIndex);
@@ -65,6 +67,8 @@ public class MainPage {
             WebElement orderBtn = wait.until(ExpectedConditions.elementToBeClickable(startOrderButtonMiddle));
             orderBtn.click();
             System.out.println("✅ Клик по кнопке 'Заказать' (нижняя) выполнен");
+
         }
     }
 }
+

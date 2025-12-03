@@ -1,10 +1,14 @@
+
 import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 
+
 @RunWith(Parameterized.class)
 public class OrderScooterTest extends BaseTest {
+
+
 
     private final int index;
     private final boolean choiceBtnTop;
@@ -54,6 +58,7 @@ public class OrderScooterTest extends BaseTest {
     public void testOrderProcess() {
         System.out.println("Запуск теста #" + (index + 1) + ": " + customerFirstName + " " + customerLastName);
 
+
         // === Шаг 1: Выбор кнопки "Заказать" (верхняя или нижняя) ===
         mainPage.clickOrderBtn(choiceBtnTop);
 
@@ -70,4 +75,7 @@ public class OrderScooterTest extends BaseTest {
 
         orderCompleted.orderCompleteMessage(customerFirstName, customerLastName);
     }
+
+
+
 }

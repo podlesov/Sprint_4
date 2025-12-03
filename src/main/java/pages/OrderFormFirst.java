@@ -26,6 +26,7 @@ public class OrderFormFirst {
 
     public void enterDataToFormFirst(String customerFirstName, String customerLastName, String customerAdress, String customerPhoneNumber, String metroStation) {
 
+
             // Заполняем первую форму ззаказа
             wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField)).sendKeys(customerFirstName);
             driver.findElement(lastNameField).sendKeys(customerLastName);
@@ -42,5 +43,10 @@ public class OrderFormFirst {
         WebElement nextBtn = wait.until(ExpectedConditions.elementToBeClickable(nextButton));
         nextBtn.click();
         System.out.println("✅ Клик по кнопке 'Далее' выполнен");
+
+
     }
+
+
+
 }
