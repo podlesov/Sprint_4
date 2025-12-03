@@ -65,7 +65,6 @@ public class MainPage {
             WebElement orderBtn = wait.until(ExpectedConditions.elementToBeClickable(startOrderButtonMiddle));
             orderBtn.click();
             System.out.println("✅ Клик по кнопке 'Заказать' (нижняя) выполнен");
-
         }
     }
 }
