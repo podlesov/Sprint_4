@@ -20,18 +20,12 @@ public class OrderFormSecond {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    //By dateField = By.className("Input_Input__1iN_Z Input_Responsible__1jDKN react-datepicker-ignore-onclickoutside");
     By dateField = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
-    //By periodField =
     By periodField = By.className("Dropdown-control");
-    //By nextButton = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Далее']");
     By blackColor = By.id("black");
     By greyColor = By.id("grey");
     By commentField = By.xpath(".//input[@placeholder='Комментарий для курьера']");
     By finalOrderButton = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM' and text()='Заказать']");
-
-
-
 
     public void enterDataToSecondForm(String orderDate, String orderPeriod, String orderScooterColor ,String orderComment) {
 
