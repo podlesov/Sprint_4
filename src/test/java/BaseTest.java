@@ -3,6 +3,8 @@ import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.*;
@@ -26,7 +28,7 @@ public class BaseTest {
 
     @Before
     public void setUp() {
-     // /*     Устанавливанм драйвер для Chrome
+      // /*     Устанавливанм драйвер для Chrome
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
@@ -62,21 +64,9 @@ public class BaseTest {
         WebElement cookieButton = wait.until(ExpectedConditions.elementToBeClickable(cookieButtonLocator));
         cookieButton.click();
 
-
-
-
-
-
-
-
-
-
     }
 
-
-
-
-    // /*
+  // /*
     @After
     public void tearDown() {
         if (driver != null) {

@@ -37,10 +37,7 @@ public class MainPage {
         // Прокручиваем к элементу
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", questionByIndex);
 
-        // Небольшая пауза для стабильности (особенно важно для Firefox)
-        try { Thread.sleep(300); } catch (InterruptedException e) { }
-
-        // Сначала пробуем обычный клик
+        // Кликаем по вопросу
         try {
             questionByIndex.click();
             System.out.println("✅ Успешно кликнули на  вопрос ");
@@ -73,9 +70,5 @@ public class MainPage {
 
         }
     }
-
-
-
-
 }
 
